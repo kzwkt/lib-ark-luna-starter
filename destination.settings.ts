@@ -1,6 +1,6 @@
 export const DESTINATION_SETTINGS = {
-    appName: "SDI" as const,
-    appPath: "sdi" as const,
+    appName: "Ark Luna SDK" as const,
+    appPath: "lib-ark-luna-starter" as const,
     get repoUrl() {
         return `https://github.com/arksouthern/${this.appPath}` as const
     },
