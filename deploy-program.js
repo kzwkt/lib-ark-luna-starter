@@ -16,6 +16,8 @@ if (!folder)
     throw 'No folders found in the source directory.'
 
 // Copy the first folder to the destination
-fs.cpSync(path.join(srcDir, folder), destDir, { dereference: true });
+fs.cpSync(path.join(srcDir, folder), destDir, { dereference: true, recursive: true });
+fs.rmSync(path.join(destDir, "frontend", "node_modules"), {force: true, recursive: true})
+fs.rmSync(path.join(destDir, "backend", "node_modules"), {force: true, recursive: true})
 
 ChildProccess.execSync("git switch luna")
