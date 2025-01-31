@@ -26,5 +26,4 @@ export default defineConfig(({mode}) => ({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: mode == "production" ? '/app/sdi' : "/"
 }))
